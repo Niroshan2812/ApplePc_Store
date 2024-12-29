@@ -10,10 +10,14 @@ import org.niroshan.applepc_store.Searvice.OderProductSearvice;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+
 public class OderProductSearviceImp implements OderProductSearvice {
 
     private ProductOderRepo productOderRepo;
+
+    public OderProductSearviceImp(ProductOderRepo productOderRepo) {
+        this.productOderRepo = productOderRepo;
+    }
 
     @Override
     public OderProductDto createOderProduct(OderProductDto oderProductDto) {

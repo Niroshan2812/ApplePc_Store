@@ -5,7 +5,9 @@ import org.niroshan.applepc_store.Entity.OderProduct;
 
 public class OderProductMapping {
     public static OderProductDto mapOderProductDto(OderProduct oderProduct) {
+        System.out.println("This is oder"+oderProduct.getOderStatus());
         return new OderProductDto(
+
                 oderProduct.getOderId(),
                 oderProduct.getOrderDate(),
                 oderProduct.getOderStatus()

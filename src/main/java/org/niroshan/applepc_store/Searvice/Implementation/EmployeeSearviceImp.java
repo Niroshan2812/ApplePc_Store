@@ -9,9 +9,13 @@ import org.niroshan.applepc_store.Searvice.EmployeeSearvice;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+//@AllArgsConstructor
 public class EmployeeSearviceImp implements EmployeeSearvice {
+
     private EmployeeRepository employeeRepository;
+    public EmployeeSearviceImp(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
     @Override
     public EmployeeDto createEmployee(EmployeeDto employeeDto) {
         Employee employee = EmployeeMapping.maptoEmployee(employeeDto);
