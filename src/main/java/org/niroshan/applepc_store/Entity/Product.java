@@ -8,15 +8,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
 @Entity
-public class Employee {
-  @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long employee_id;
-    private String lname;
-    private String fname;
-    private String email;
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String pname;
+    private String pDescription;
+    private String qtyInstock;
+    private double price;
 }
